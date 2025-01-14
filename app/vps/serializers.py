@@ -14,4 +14,5 @@ class ChangeStatusSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = VPS
-        fields = ('status',)
+        fields = ('uid', 'cpu', 'ram', 'hdd', 'status')
+        read_only_fields = ('uid', 'cpu', 'ram', 'hdd')
